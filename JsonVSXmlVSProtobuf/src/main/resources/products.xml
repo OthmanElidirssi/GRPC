@@ -1,0 +1,12 @@
+<products>
+    <product>
+        <id>1</id>
+        <name>PC</name>
+        <price>11200</price>
+    </product>
+    <product>
+        <id>2</id>
+        <name>Printer</name>
+        <price>900</price>
+    </product>
+</products>

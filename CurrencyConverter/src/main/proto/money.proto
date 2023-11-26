@@ -1,0 +1,25 @@
+syntax="proto3";
+package org.examples.stubs;
+
+message CurrencyConversionRequest{
+  string from=1;
+  string to=2;
+  double amount=3;
+
+}
+
+message CurrencyConversionResponse {
+
+  string to=1;
+  double amount=2;
+
+}
+
+service MoneyConversionService{
+  rpc unaryConversion(CurrencyConversionRequest) returns (CurrencyConversionResponse);
+
+  rpc serverStreamingConversion(CurrencyConversionRequest) returns (stream CurrencyConversionResponse);
+
+
+  rpc clientStreamingConversion(stream CurrencyConversionRequest) returns (CurrencyConversionResponse);
+}
